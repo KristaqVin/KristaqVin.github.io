@@ -1,6 +1,10 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
+title: Home
 ---
+
+## Welcome to my personal webpage!
+
+Here I will post some articles about stuff I find interesting, my projects, and some fun stuff.
+
+Stay tuned for more updates!
