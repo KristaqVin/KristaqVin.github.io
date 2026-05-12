@@ -1,0 +1,95 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$text-color: #33ff33;
+$background-color: #0d0d0d;
+$brand-color: #33ff33;
+
+@import "minima";
+
+/* Terminal aesthetic overrides */
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', Courier, monospace;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Subtle CRT scanline overlay */
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* Links */
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: $text-color;
+  text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33;
+}
+
+/* Blocky borders */
+.site-header, .site-footer {
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  border-radius: 0;
+}
+
+.site-nav {
+  border: 1px solid #333333;
+  border-radius: 0;
+  background-color: #0d0d0d;
+}
+
+/* Removing border-radius everywhere */
+* {
+  border-radius: 0 !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffb000;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* List items with > */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li::before {
+  content: "> ";
+  color: #ffb000;
+}
+
+/* Fix post-list and navigation styles to remove extra padding if necessary */
+.post-list {
+  margin-left: 0;
+}
+
+.site-title {
+  color: #ffb000;
+}
+.site-title:hover {
+  text-decoration: none;
+  text-shadow: 0 0 5px #ffb000;
+}
