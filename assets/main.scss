@@ -93,3 +93,18 @@ li::before {
   text-decoration: none;
   text-shadow: 0 0 5px #ffb000;
 }
+
+
+/* Mobile overrides */
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: $background-color;
+    border: 1px solid #333;
+  }
+  .site-nav .page-link {
+    color: $text-color;
+  }
+  .site-nav .menu-icon > svg {
+    fill: $brand-color;
+  }
+}
